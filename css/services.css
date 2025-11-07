@@ -1,0 +1,212 @@
+/* --- Global Styles and Reset --- */
+body {
+    background-color: #000; /* Pure black background */
+    color: #fff; /* Pure white text */
+    /* Apply League Spartan to all text */
+    font-family: 'League Spartan', sans-serif; 
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* Increase padding/margins to match the clean spacing */
+    padding: 0 8%; 
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+/* NAVBAR */
+.navbar {
+  position: absolute;
+  top: 30px;
+  left: 40px;
+  right: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 10;
+}
+
+.logo {
+  font-weight: 700;
+  font-size: 2rem;
+}
+
+.menu {
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+ul {
+    list-style: none; /* Remove bullet points */
+    padding: 0;
+    margin: 0;
+}
+
+/* --- Header Section --- */
+.header {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    padding: 60px 0; /* Increased vertical padding for more air */
+    margin-bottom: 70px;
+}
+
+.logo {
+    font-size: 38px; /* Larger logo size */
+    font-weight: 800; /* Extra bold */
+    letter-spacing: 2px;
+    margin: 0;
+}
+
+.menu-icon {
+    width: 35px; /* Wider menu icon */
+    height: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.bar {
+    width: 100%;
+    height: 3px;
+    background-color: #fff;
+}
+
+/* --- Main Content Area --- */
+
+.content-area {
+    max-width: 1100px; 
+    margin: 0 auto;
+    margin-top: 180px;
+    text-align: center;
+}
+
+.imagen {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* mitad imagen / mitad texto */
+  align-items: center;
+  width: 600px;
+  margin-top: -50px;
+}
+
+.image-side img {
+  width: 300px;
+  object-fit: cover;
+  margin-left: 150px;
+}
+
+.grillaprueba {
+    display: flex;
+    gap: 30px;
+}
+
+
+.section-title{
+    text-align: center;
+}
+
+/* --- Services Grid (The core layout) --- */
+.services {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 70px;
+    margin-bottom: 70px;
+}
+
+.category-title {
+    font-size: 24px;
+    font-weight: 900;
+    text-transform: uppercase; 
+    margin-bottom: 15px;
+}
+
+.service-list li {
+    font-size: 22px; 
+    font-weight: 300;
+    line-height: 1.3;
+    margin-bottom: 5px;
+}
+
+.content {
+    text-align: right;
+}
+
+.branding {
+    text-align: left;
+}
+
+/* --- Call to Action Section --- */
+
+.call-to-action {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 100px;
+}
+
+.cta-headline {
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 0;
+    margin: 0 0 50px 0; 
+    max-width: 650px; 
+}
+
+.contact-button {
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    text-decoration: none; 
+    text-transform: lowercase; 
+    padding-bottom: 5px; 
+    /* Create the white line exactly under the text */
+    border-bottom: 2px solid #fff; 
+    cursor: pointer;
+    padding-left: 0;
+}
+
+
+/* --- Responsive Adjustments for Smaller Screens (e.g., Mobile) --- */
+@media (max-width: 850px) {
+    /* Reduce overall side padding */
+    body {
+        padding: 0 5%;
+    }
+    
+    .header {
+        padding: 40px 0;
+    }
+    
+    .logo {
+        font-size: 32px;
+    }
+
+    .services {
+        /* Stack the two columns on top of each other */
+        grid-template-columns: 1fr;
+        gap: 50px; /* Reduced gap */
+        margin-bottom: 80px;
+    }
+
+    .category-title {
+        font-size: 22px;
+    }
+
+    .service-list li {
+        font-size: 20px;
+    }
+
+    .cta-headline {
+        font-size: 36px;
+        max-width: 100%;
+        margin-bottom: 40px;
+    }
+
+    .contact-button {
+        font-size: 16px;
+    }
+}

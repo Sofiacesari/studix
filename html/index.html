@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Odette Studio</title>
+  <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+
+<body>
+  <!-- Menu Overlay -->
+  <div class="menu-overlay" id="menu-overlay">
+    <div class="close-btn" id="close-btn">✕</div>
+    <div class="overlay-header">
+      <h1 class="overlay-logo">ODETTE</h1>
+    </div>
+    <nav class="overlay-nav">
+      <a href="#">Contact</a>
+      <a href="#">Services</a>
+      <a href="#">Our Work</a>
+    </nav>
+  </div>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <header class="navbar">
+      <div class="Hi">Hi!</div>
+      <div class="menu" id="menu-btn">☰</div>
+    </header>
+    <div class="hero-content">
+      <p>We’re a creative studio based in<br>Buenos Aires, working globally.</p>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section class="about">
+    <h1>ODETTE</h1>
+    <p>we craft messages, we build brands</p>
+  </section>
+
+  <!-- Video Section -->
+  <section class="video">
+    <h2>VIDEO CON<br>TRABAJOS</h2>
+    <div class="video-placeholder">
+      <video controls muted loop poster="https://placehold.co/600x400/000000/FFFFFF/png?text=Video+Placeholder">
+        <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+    </div>
+    <a href="#" class="cta">a work →</a>
+  </section>
+
+  <!-- JavaScript -->
+  <script>
+    const menuBtn = document.getElementById("menu-btn");
+    const closeBtn = document.getElementById("close-btn");
+    const overlay = document.getElementById("menu-overlay");
+
+    menuBtn.addEventListener("click", () => {
+      overlay.classList.add("active");
+    });
+
+    closeBtn.addEventListener("click", () => {
+      overlay.classList.remove("active");
+    });
+  </script>
+</body>
+</html>
