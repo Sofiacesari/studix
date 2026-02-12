@@ -1,13 +1,12 @@
 /* --- Global Styles and Reset --- */
 body {
-    background-color: #000; /* Pure black background */
-    color: #fff; /* Pure white text */
-    /* Apply League Spartan to all text */
+    background-image: url(../img/imgservices3.png);
+    color: #fff; 
     font-family: 'League Spartan', sans-serif; 
+    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.6);
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    /* Increase padding/margins to match the clean spacing */
     padding: 0 8%; 
 }
 

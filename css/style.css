@@ -37,7 +37,7 @@ body {
 /* Hero */
 .hero {
   position: relative;
-  background: url("img/indexop2.jpg") center/cover no-repeat;
+  background: url("../img/indexop2.jpg") center/cover no-repeat;
   height: 100vh;
   display: flex;
   align-items: center;
@@ -63,9 +63,17 @@ body {
   align-items: center;
   justify-content: center;
   text-align: center;
-  width: 100%;
-  max-width: 900px;
-  padding: 0 20px;
+  width: 100%; /* Asegura el ancho total */
+  padding: 0;   /* Quitamos el padding de 20px que tenías */
+}
+
+/* Agrega esta regla específica para la imagen */
+.hero-content img {
+  width: 100%;      
+  height: auto; 
+  display: block; 
+  object-fit: cover;
+  filter: drop-shadow(0 8px 20px rgba(0, 0, 0, 0.25)); 
 }
 
 .hero-content p {
