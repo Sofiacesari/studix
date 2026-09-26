@@ -8,7 +8,7 @@
 body {
   font-family: "League Spartan", sans-serif;
   background-color: #000;
-  color: #fff;
+  color: #f2e5d5;
   overflow-x: hidden;
 }
 
@@ -37,7 +37,7 @@ body {
 /* Hero */
 .hero {
   position: relative;
-  background: url("../img/indexop2.jpg") center/cover no-repeat;
+  background: url("../img/fondoweb.png") center/cover no-repeat;
   height: 100vh;
   display: flex;
   align-items: center;
@@ -57,7 +57,7 @@ body {
 .hero-content {
   position: relative;
   z-index: 1;
-  color: #fff;
+  color: #f2e5d5;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -92,7 +92,7 @@ body {
   width: 100%;
   height: 100%;
   background-color: #000;
-  color: #fff;
+  color: #f2e5d5;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -134,7 +134,7 @@ body {
 }
 
 .overlay-nav a {
-  color: #fff;
+  color: #f2e5d5;
   text-decoration: none;
   font-size: 2rem;
   font-weight: 400;
@@ -163,7 +163,7 @@ body {
 /* About */
 .about {
   background-color: #000;
-  color: #fff;
+  color: #f2e5d5;
   text-align: center;
   height: 40vh;
   display: flex;
@@ -184,7 +184,6 @@ body {
   opacity: 0.9;
 }
 
-
 /* Responsive */
 @media (max-width: 768px) {
   .hero-content p {
@@ -202,5 +201,74 @@ body {
 
   .video-placeholder video {
     width: 90%;
+  }
+}
+
+
+/* Landing images */
+
+.landing-mobile {
+  display: none;
+}
+
+.landing-desktop {
+  display: block;
+}
+
+
+/* Mobile */
+
+@media (max-width: 768px) {
+
+  /* Hide text on mobile */
+  .Hi {
+    display: none;
+  }
+
+  /* Show mobile image */
+  .landing-desktop {
+    display: none;
+  }
+
+  .landing-mobile {
+    display: block;
+  }
+
+}
+/* --- SOLO PARA MOBILE (768px o menos) --- */
+@media screen and (max-width: 768px) {
+  html, body {
+    margin: 0;
+    padding: 0;
+  }
+
+  .hero {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    height: 100dvh; /* Pantalla completa exacta en navegadores móviles */
+    overflow: hidden;
+  }
+
+  .navbar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+    box-sizing: border-box;
+  }
+
+  .hero-content {
+    width: 100%;
+    height: 100%;
+  }
+
+  .hero-content img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;    /* Llena toda la pantalla sin deformarse */
+    object-position: center; /* Centra el recorte */
+    display: block;
   }
 }
